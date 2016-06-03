@@ -373,6 +373,7 @@ define([
                         break;
 
                     case 'finishGame':
+                        console.log("FINISH");
                         var status;
                         if(data['equality']){
                             status = 'Ничья';
