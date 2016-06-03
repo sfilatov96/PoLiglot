@@ -5,17 +5,28 @@ define([
 ], function(
     Backbone,
     tmpl,
-    players
+    ScoresCollection
 
 ){
     var scoreboardView = Backbone.View.extend({
         template: tmpl,
         initialize: function () {
-            this.render()
+            this.fetching()
         },
-        render: function () {
-            this.$el.html(tmpl({collection: players.toJSON()}));
+
+        render:function(data) {
+            this.$el.html(tmpl({scores:data}));
             return this;
+        },
+        fetching: function () {
+            var newThis = this;
+            ScoresCollection.fetch({remove: false})
+                .done( function(){
+                    console.log(ScoresCollection.toJSON());
+                    this.render(ScoresCollection.toJSON());
+                    //newThis.$el.html(newThis.template( { scores : ScoresCollection.toJSON() } ));
+                }.bind(this));
+
         },
         show: function () {
             this.$el.show();

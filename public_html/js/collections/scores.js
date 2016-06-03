@@ -3,25 +3,16 @@ define([
 	'models/score'
 ], function(
 	Backbone,
-	playerModel
+	Score
 ){
-    var resp
     var ScoreCollection = Backbone.Collection.extend({
-    	model: playerModel,
-        url:'api/scoreboard',
-        initialize: function(){
-        this.fetch({
-            success: this.fetchSuccess,
-            error: this.fetchError
-        });
-        },
-        fetchSuccess: function (collection, response) {
-            console.log(response);
-            resp = response;
-               return response;
+    	model: Score,
+        url: '/api/scoreboard',
+
+        comparator: function( collection ) {
+            return ( -collection.get('score') );
         }
 
     });
-    console.log(resp);
     return new ScoreCollection();
 });

@@ -29109,6 +29109,7 @@ define('views/main',[
         initialize: function() {
             this.off();
             this.render();
+            console.log(preloader);
         },
         render: function () {
             this.$el.html(tmpl());
@@ -29332,16 +29333,16 @@ define('views/registration',[
     });
     return new registrationView();
 });
-define('tmpl/scoreboard',[],function () { return function (__fest_context){"use strict";var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<div class=\"main \"><div class=\"main-form\"><h2 class=\"main-form__h2\">Рекорды</h2><hr/><div class=\"record-list\"><table class=\"record-list__table\"><tr><td class=\"table__td_login\"><u>Логин игрока:</u></td><td class=\"table__td_score\"><u>Результат:</u></td></tr>");var i,player,__fest_iterator0;try{__fest_iterator0=json.collection || {};}catch(e){__fest_iterator={};__fest_log_error(e.message);}for(i in __fest_iterator0){player=__fest_iterator0[i];__fest_buf+=("<tr><td class=\"table__td_login\">");try{__fest_buf+=(player.name)}catch(e){__fest_log_error(e.message + "13");}__fest_buf+=("</td><td class=\"table__td_score\">");try{__fest_buf+=(player.score)}catch(e){__fest_log_error(e.message + "14");}__fest_buf+=("</td></tr>");}__fest_buf+=("</table></div><hr/><a href=\"#\"><button class=\"js-main-form__button main-form__button button\"><span class=\"glyphicon glyphicon-triangle-left\" aria-hidden=\"true\"></span>Назад</button></a></div></div>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
+define('tmpl/scoreboard',[],function () { return function (__fest_context){"use strict";var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<div class=\"main \"><div class=\"main-form\"><h2 class=\"main-form__h2\">Рекорды</h2><hr/><div class=\"record-list\"><table class=\"record-list__table\"><tr><td class=\"table__td_login\"><u>Логин игрока:</u></td><td class=\"table__td_score\"><u>Результат:</u></td></tr>");var i,__fest_iterator0;try{__fest_iterator0=json.scores || {};}catch(e){__fest_iterator={};__fest_log_error(e.message);}for(i in __fest_iterator0){__fest_buf+=("<tr><td class=\"table__td_login\">");try{__fest_buf+=(json.scores[i].username)}catch(e){__fest_log_error(e.message + "13");}__fest_buf+=("</td><td class=\"table__td_score\">");try{__fest_buf+=(json.scores[i].score)}catch(e){__fest_log_error(e.message + "14");}__fest_buf+=("</td></tr>");}__fest_buf+=("</table></div><hr/><a href=\"#\"><button class=\"js-main-form__button main-form__button button\"><span class=\"glyphicon glyphicon-triangle-left\" aria-hidden=\"true\"></span>Назад</button></a></div></div>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
 define('models/score',[
     'backbone'
 ], function(
     Backbone
 ){
 
-    var ScoreModel = Backbone.Model.extend({
+    var Score = Backbone.Model.extend({
     	defaults: {
-    		name: '',
+    		username: '',
     		score: 0
     	}
     });
@@ -29353,27 +29354,18 @@ define('collections/scores',[
 	'models/score'
 ], function(
 	Backbone,
-	playerModel
+	Score
 ){
-
     var ScoreCollection = Backbone.Collection.extend({
-    	model: playerModel,
-    	comparator: function(player) {
-            return -player.get('score');   
-        }
-    });
+    	model: Score,
+        url: '/api/scoreboard',
 
-    return new ScoreCollection([
-    	{name: 'Stepan123', score: 16},
-    	{name: 'IGORR', score: 1.4},
-    	{name: 'Dmitr55343', score: 33},
-    	{name: 'supergamer123', score: -7},
-    	{name: 'Vitaly', score: 45},
-    	{name: 'Sanja77', score: 2},
-    	{name: 'Max', score: 25},
-    	{name: 'Eddy1986', score: 0},
-    	{name: 'gamefun', score: 0}
-    ]);
+        comparator: function( collection ) {
+            return ( -collection.get('score') );
+        }
+
+    });
+    return new ScoreCollection();
 });
 define('views/scoreboard',[
     'backbone',
@@ -29382,7 +29374,7 @@ define('views/scoreboard',[
 ], function(
     Backbone,
     tmpl,
-    players
+    ScoresCollection
 
 ){
     var scoreboardView = Backbone.View.extend({
@@ -29391,7 +29383,12 @@ define('views/scoreboard',[
             this.render()
         },
         render: function () {
-            this.$el.html(tmpl({collection: players.toJSON()}));
+            var newThis = this;
+            ScoresCollection.fetch({remove: false})
+                .done( function(){
+                    newThis.$el.html(newThis.template( { scores : ScoresCollection.toJSON() } ));
+                });
+
             return this;
         },
         show: function () {

@@ -4,12 +4,12 @@ define([
     Backbone
 ){
 
-    var ScoreModel = Backbone.Model.extend({
+    var Score = Backbone.Model.extend({
     	defaults: {
-    		name: '',
+    		login: '',
     		score: 0
     	}
     });
 
-    return ScoreModel;
+    return Score;
 });
