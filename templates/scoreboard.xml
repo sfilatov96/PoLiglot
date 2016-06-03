@@ -9,10 +9,10 @@
 						<td class="table__td_login"><u>Логин игрока:</u></td>
 						<td class="table__td_score"><u>Результат:</u></td>
 					</tr>
-					<fest:each iterate="json.collection" index="i" value="player"> 
+					<fest:each iterate="json.scores" index="i" > 
 					<tr>      
-						<td class="table__td_login"><fest:value output="text">player.name</fest:value></td>
-						<td class="table__td_score"><fest:value output="text">player.score</fest:value></td>
+						<td class="table__td_login"><fest:value output="text">json.scores[i].login</fest:value></td>
+						<td class="table__td_score"><fest:value output="text">json.scores[i].score</fest:value></td>
 					</tr>		
 					</fest:each>
 				</table> 
